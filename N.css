@@ -1,0 +1,113 @@
+body{
+margin:0;
+font-family:sans-serif;
+color:white;
+
+background:#140700;
+}
+
+/* พื้นหลังมืด */
+
+body::before{
+content:"";
+position:fixed;
+
+top:0;
+left:0;
+
+width:100%;
+height:100%;
+
+background:rgba(0,0,0,0.4);
+
+z-index:0;
+pointer-events:none;
+}
+
+/* ปุ่มกลับ */
+
+.backBtn{
+position:absolute;
+top:20px;
+left:20px;
+
+background:#2a7bdc;
+color:white;
+
+border:none;
+padding:10px 20px;
+
+border-radius:12px;
+
+font-size:16px;
+cursor:pointer;
+
+z-index:10;
+}
+
+/* กล่องหลัก */
+
+.container{
+position:relative;
+z-index:2;
+
+display:flex;
+align-items:center;
+justify-content:space-between;
+
+padding:120px;
+gap:60px;
+}
+
+/* ข้อความ */
+
+.textBox{
+width:60%;
+font-size:18px;
+line-height:1.8;
+}
+
+.textBox h2{
+margin-bottom:20px;
+font-size:28px;
+}
+
+/* กล่องรูป */
+
+.photoBox{
+position:relative;
+}
+
+/* กรอบ Polaroid */
+
+.photoBox img{
+width:260px;
+
+background:white;
+padding:12px 12px 40px 12px;
+
+box-shadow:0 10px 25px rgba(0,0,0,0.6);
+
+transform:rotate(6deg);
+
+border-radius:4px;
+}
+
+/* เทป */
+
+.photoBox::before{
+content:"";
+position:absolute;
+
+width:120px;
+height:35px;
+
+background:#d8c39a;
+
+top:-10px;
+left:70px;
+
+transform:rotate(-5deg);
+
+opacity:0.9;
+}
